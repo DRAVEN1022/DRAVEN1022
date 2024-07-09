@@ -11,7 +11,7 @@ def send_message(webhookurl, content, times):
         'content': content,
     }
 
-    for  in range(times):
+    for _ in range(times):
         response = requests.post(webhook_url, headers=headers, data=json.dumps(data))
 
         if response.statuscode == 204:
